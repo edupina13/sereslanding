@@ -1,34 +1,41 @@
 import { useState, useEffect, useRef, useCallback } from "react";
 import { motion } from "framer-motion";
-import imgAnsiedad    from "../assets/images/services/ansiedad.svg";
-import imgIndividual  from "../assets/images/services/individual.svg";
-import imgPareja      from "../assets/images/services/pareja.svg";
-import imgCrecimiento from "../assets/images/services/crecimiento.svg";
+import imgAnsiedad from "../assets/images/services/IMG_ANSIEDAD.PNG";
+import imgDepresion from "../assets/images/services/IMG_DEPRESION.PNG";
+import imgDuelo from "../assets/images/services/IMG_DUELO.PNG";
+import imgTrauma from "../assets/images/services/IMG_TRAUMA.PNG";
+import imgMentecuerpo from "../assets/images/services/IMG_MENTECUERPO.PNG";
 
 const services = [
   {
     num: "01",
     title: "Ansiedad y estrés",
-    text: "Aprende a gestionar pensamientos y emociones que generan estrés o preocupación constante.",
+    text: "Cuando el cuerpo vive en alerta constante, aunque la mente ya no sepa por qué.",
     img: imgAnsiedad,
   },
   {
     num: "02",
-    title: "Terapia individual",
-    text: "Un espacio seguro para comprender tus emociones y trabajar en tu crecimiento personal.",
-    img: imgIndividual,
+    title: "Depresión",
+    text: "Reconectar con el cuerpo cuando todo pesa y las ganas se han ido.",
+    img: imgDepresion,
   },
   {
     num: "03",
-    title: "Terapia de pareja",
-    text: "Mejora la comunicación y fortalece la conexión en tu relación de pareja.",
-    img: imgPareja,
+    title: "Duelo y pérdidas",
+    text: "El cuerpo también necesita tiempo y espacio para despedirse.",
+    img: imgDuelo,
   },
   {
     num: "04",
-    title: "Crecimiento personal",
-    text: "Desarrolla herramientas para mejorar tu bienestar emocional y tu vida diaria.",
-    img: imgCrecimiento,
+    title: "Trauma y experiencias difíciles",
+    text: "Lo que no se pudo procesar con palabras, el cuerpo lo sigue guardando.",
+    img: imgTrauma,
+  },
+  {
+    num: "05",
+    title: "Conexión mente-cuerpo",
+    text: "Dolores, tensión, cansancio sin causa médica clara: el cuerpo también habla.",
+    img: imgMentecuerpo,
   },
 ];
 
@@ -97,15 +104,32 @@ export default function Services() {
               lineHeight: 1.1,
             }}
           >
-            ¿En qué puedo{" "}
-            <em style={{ fontStyle: "italic", color: "var(--color-accent)" }}>ayudarte?</em>
+            ¿Cómo puedo{" "}
+            <em style={{ fontStyle: "italic", color: "var(--color-accent)" }}>
+              acompañarte?
+            </em>
           </h2>
-          <p
-            className="text-sm font-light"
+          <div
+            className="flex flex-wrap items-center justify-center gap-x-3 gap-y-2 text-sm font-light"
             style={{ color: "var(--color-muted)" }}
           >
-            Acompañamiento profesional para tu bienestar emocional
-          </p>
+            <span>Psicoterapia individual</span>
+            <span
+              className="hidden sm:block h-4 w-px"
+              style={{ backgroundColor: "var(--color-accent)", opacity: 0.5 }}
+            />
+            <span>Niños</span>
+            <span
+              className="hidden sm:block h-4 w-px"
+              style={{ backgroundColor: "var(--color-accent)", opacity: 0.5 }}
+            />
+            <span>Adolescentes y adultos</span>
+            <span
+              className="hidden sm:block h-4 w-px"
+              style={{ backgroundColor: "var(--color-accent)", opacity: 0.5 }}
+            />
+            <span>Terapia en línea</span>
+          </div>
         </motion.div>
 
         {/* Slider */}
@@ -250,7 +274,8 @@ export default function Services() {
                 className="h-1.5 rounded-full transition-all duration-300"
                 style={{
                   width: i === cur ? "22px" : "7px",
-                  backgroundColor: i === cur ? "var(--color-accent)" : "var(--color-neutral)",
+                  backgroundColor:
+                    i === cur ? "var(--color-accent)" : "var(--color-neutral)",
                 }}
                 aria-label={`Página ${i + 1}`}
               />

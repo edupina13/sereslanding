@@ -1,7 +1,7 @@
 import { useState } from "react"
 import { motion, AnimatePresence } from "framer-motion"
 import { FaBars, FaTimes } from "react-icons/fa"
-import logo from "../assets/images/Logo.png"
+import logo from "../assets/images/services/Logo.png"
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false)
@@ -42,8 +42,9 @@ export default function Navbar() {
         >
           {[
             { name: "Inicio", href: "#inicio" },
-            { name: "Sobre mí", href: "#about" },
             { name: "Servicios", href: "#servicios" },
+            { name: "Sobre mí", href: "#about" },
+            { name: "Redes", href: "#redes" },
             { name: "FAQ", href: "#faq" },
             { name: "Contacto", href: "#contacto" },
           ].map((item) => (
@@ -107,8 +108,10 @@ export default function Navbar() {
             >
               {[
                 { name: "Inicio", href: "#inicio" },
-                { name: "Sobre mí", href: "#about" },
                 { name: "Servicios", href: "#servicios" },
+                { name: "Sobre mí", href: "#about" },
+                { name: "Redes", href: "#redes" },
+                { name: "FAQ", href: "#faq" },
                 { name: "Contacto", href: "#contacto" },
               ].map((item) => (
                 <li key={item.name}>

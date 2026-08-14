@@ -1,4 +1,4 @@
-import logo from "../assets/images/Logo.png";
+import logo from "../assets/images/services/Logo.png";
 
 export default function SplashScreen() {
   return (

@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 // TODO: reemplazar por foto real de la psicóloga en consulta cuando esté disponible
-import consultaImg from "../assets/images/consulta-placeholder.svg";
+import consultaImg from "../assets/images/services/IMG_CONSULTA2.PNG";
 
 const credentials = [
   {

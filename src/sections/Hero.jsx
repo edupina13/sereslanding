@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import terap from "../assets/images/terapia.png";
+import terap from "../assets/images/services/terapia.png";
 
 export default function Hero() {
   return (

@@ -1,11 +1,12 @@
 import { motion } from "framer-motion"
-import sobre from "../assets/images/yadiapp7.jpeg"
+import { FaLaptop, FaGraduationCap } from "react-icons/fa6";
+import sobre from "../assets/images/services/yadiapp7.jpeg"
 
 const stats = [
   { num: "10+", label: "Años de experiencia" },
-  { num: "500+", label: "Pacientes atendidos" },
-  { num: "98%", label: "Satisfacción" },
-]
+  { icon: FaLaptop, label: "Atención presencial y online" },
+  { icon: FaGraduationCap, label: "Formación especializada en psicoterapia corporal" },
+];
 
 const enfoques = ["Cognitivo-conductual", "Humanista", "Mindfulness"]
 
@@ -91,13 +92,11 @@ export default function About() {
             {/* Línea decorativa */}
             <div className="w-9 h-px mb-5" style={{ backgroundColor: "var(--color-accent)" }} />
 
-            <p className="text-sm leading-relaxed font-light mb-3" style={{ color: "var(--color-muted)" }}>
-              Soy psicóloga clínica especializada en bienestar emocional, ansiedad y desarrollo
-              personal. Mi objetivo es ofrecer un espacio seguro donde puedas explorar tus
-              pensamientos, comprender tus emociones y construir una vida más plena.
+            <p className="text-sm leading-7 font-light text-justify mb-3" style={{ color: "var(--color-muted)" }}>
+              Soy psicóloga clínica especializada en bienestar emocional, ansiedad y desarrollo personal. Mi objetivo es ofrecer un espacio seguro donde puedas explorar tus pensamientos, comprender tus emociones y construir una vida más plena
             </p>
 
-            <p className="text-sm leading-relaxed font-light mb-5" style={{ color: "var(--color-muted)" }}>
+            <p className="text-sm leading-7 font-light text-justify mb-5" style={{ color: "var(--color-muted)" }}>
               Trabajo con enfoques terapéuticos modernos que te ayudan a desarrollar
               herramientas para afrontar los desafíos emocionales del día a día.
             </p>
@@ -135,7 +134,7 @@ export default function About() {
                       color: "var(--color-deep)",
                     }}
                   >
-                    {s.num}
+                    {s.icon ? <s.icon size={28} /> : s.num}
                   </p>
                   <p
                     className="text-xs tracking-wider uppercase font-light"
