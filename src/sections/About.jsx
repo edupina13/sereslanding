@@ -8,7 +8,7 @@ const stats = [
   { icon: FaGraduationCap, label: "Formación especializada en psicoterapia corporal" },
 ];
 
-const enfoques = ["Cognitivo-conductual", "Humanista", "Mindfulness"]
+const enfoques = [ "Humanista","Trauma","Regulación Emocional"]
 
 export default function About() {
   return (
