@@ -23,7 +23,7 @@ export default function App() {
   useEffect(() => {
     const timer = setTimeout(() => {
       setLoading(false);
-    }, 1800);
+    }, 900);
 
     return () => clearTimeout(timer);
   }, []);
@@ -35,7 +35,7 @@ export default function App() {
           <motion.div
             initial={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            transition={{ duration: 0.6 }}
+            transition={{ duration: 0.4 }}
             className="fixed inset-0 z-[9999]"
           >
             <SplashScreen />
